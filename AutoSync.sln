@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoSync", "AutoSync\AutoSync.csproj", "{75EEB0C2-422A-45E8-875E-BD901D12F0DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75EEB0C2-422A-45E8-875E-BD901D12F0DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75EEB0C2-422A-45E8-875E-BD901D12F0DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75EEB0C2-422A-45E8-875E-BD901D12F0DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75EEB0C2-422A-45E8-875E-BD901D12F0DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47B355F1-034F-406F-A25E-33552A07C236}
+	EndGlobalSection
+EndGlobal
