@@ -1,4 +1,4 @@
-﻿namespace AutoSync.ViewModels
+﻿namespace AutoSyncTool.ViewModels
 {
     internal class Main
     {

@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace AutoSync.Views
+namespace AutoSyncTool.Views
 {
     public partial class Main : Window
     {

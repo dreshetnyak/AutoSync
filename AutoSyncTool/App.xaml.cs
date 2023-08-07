@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace AutoSync
+namespace AutoSyncTool
 {
     public partial class App : Application
     { }
