@@ -6,14 +6,14 @@
 		<Nullable>enable</Nullable>
 		<UseWPF>true</UseWPF>
 		<AssemblyName>AutoSyncTool</AssemblyName>
+		<FileVersion>1.0.14</FileVersion>
+		<Version>1.0.13.0</Version>
 		<Copyright>Copyright (C) 2023 by Dennis Reshetnyak</Copyright>
+		<Description>A simple app that stays in tray and periodically synchronizes source with the destination directories.</Description>
 		<Product>AutoSync Tool</Product>
 		<Company />
 		<Authors>Dennis Reshetnyak</Authors>
-		<Version>$(FileVersion)</Version>
-		<FileVersion>1.0.0.26</FileVersion>
-		<AssemblyVersion>1.0.0.26</AssemblyVersion>
-		<PackageReleaseNotes>Release notes</PackageReleaseNotes>
+		<AssemblyVersion>1.0.14.0</AssemblyVersion>
 		
 	</PropertyGroup>
 
