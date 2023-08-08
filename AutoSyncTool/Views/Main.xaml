@@ -4,13 +4,65 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewModels="clr-namespace:AutoSyncTool.ViewModels"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
         mc:Ignorable="d"
         Title="AutoSync Tool" Height="450" Width="800">
     <Window.DataContext>
         <viewModels:Main />
     </Window.DataContext>
-    <Grid>
 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <tb:TaskbarIcon
+            Grid.Row="0"
+            Visibility="Visible"
+            IconSource="../AutoSyncTool.ico"
+            LeftClickCommand="{Binding Show}"
+            DoubleClickCommand="{Binding Show}"
+            MenuActivation="RightClick"
+            ToolTipText="AutoSync Tool">
+            <tb:TaskbarIcon.ContextMenu>
+                <ContextMenu>
+                    <MenuItem 
+                        Header="Hide" 
+                        Command="{Binding Hide}" />
+                    <MenuItem 
+                        Header="Show" 
+                        Command="{Binding Show}" />
+                    <Separator />
+                    <MenuItem 
+                        Header="Exit"
+                        Command="{Binding Exit}" />
+                </ContextMenu>
+            </tb:TaskbarIcon.ContextMenu>
+
+        </tb:TaskbarIcon>
+
+        <TabControl 
+            Grid.Row="1"
+            Margin="5,5,5,10">
+            <TabItem 
+                Header="Sync"
+                MinHeight="25"
+                MinWidth="80">
+
+            </TabItem>
+            <TabItem 
+                Header="Settings"
+                MinWidth="80">
+
+                
+
+            </TabItem>
+        </TabControl>
+
+        
 
     </Grid>
+
+
 </Window>

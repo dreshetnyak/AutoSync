@@ -11,10 +11,32 @@
 		<Company />
 		<Authors>Dennis Reshetnyak</Authors>
 		<Version>$(FileVersion)</Version>
-		<FileVersion>1.0.0.26</FileVersion>
-		<AssemblyVersion>1.0.0.26</AssemblyVersion>
+		<FileVersion>1.0.0.72</FileVersion>
+		<AssemblyVersion>1.0.0.72</AssemblyVersion>
 		<PackageReleaseNotes>Release notes</PackageReleaseNotes>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<PackageIcon></PackageIcon>
+		<ApplicationIcon>AutoSyncTool.ico</ApplicationIcon>
 		
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <Resource Include="AutoSyncTool.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="appsettings.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="AutoSyncTool.ico">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
 </Project>

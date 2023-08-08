@@ -1,40 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO.MemoryMappedFiles;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace AutoSyncTool
 {
     internal class Singleton : IDisposable
     {
-        private Mutex? SingletonMutex { get; set; }
+        private bool Disposed { get; set; }
+        private bool MutexTaken { get; set; }
+        private Mutex SingletonMutex { get; set; }
         private object SingletonMutexSync { get; } = new();
 
-        public bool TryLock(string mutexId)
+        public Singleton(string mutexId)
+        {
+            SingletonMutex = new Mutex(false, "Local\\" + mutexId);
+        }
+
+        public bool TryLock()
         {
             lock (SingletonMutexSync)
-            {
-                SingletonMutex = new Mutex(false, "Local\\" + mutexId);
-                if (SingletonMutex.WaitOne(0))
-                    return true;
-                SingletonMutex.Dispose();
-                return false;
-            }
+                return MutexTaken = SingletonMutex.WaitOne(0);
         }
 
         public void Dispose()
         {
             lock (SingletonMutexSync)
             {
-                if (SingletonMutex == null)
+                if (Disposed)
                     return;
-                SingletonMutex.ReleaseMutex();
+                Disposed = true;
+                if (MutexTaken) 
+                    SingletonMutex.ReleaseMutex();
                 SingletonMutex.Dispose();
-                SingletonMutex = null;
             }
         }
     }
