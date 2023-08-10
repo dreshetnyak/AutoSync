@@ -6,13 +6,13 @@ using static AutoSyncTool.Interop;
 
 namespace AutoSyncTool.ViewModels
 {
-    internal class Main
+    internal class MainViewModel
     {
         public ICommand Hide { get; }
         public ICommand Show { get; }
         public ICommand Exit { get; }
 
-        public Main()
+        public MainViewModel()
         {
             Hide = new RelayCommand(OnHide);
             Show = new RelayCommand(OnShow);
